@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Turret+Road:wght@500;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: #f8e8d7;
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px; }
+  body header {
+    font-family: 'Turret Road', cursive;
+    font-size: 46px;
+    letter-spacing: 8;
+    background-image: url(https://i.imgur.com/17pCsZE.jpg);
+    background-color: rgba(31, 26, 26, 0.3);
+    background-position: bottom;
+    background-blend-mode: color-burn;
+    height: 32vh; }
+    body header h1 {
+      color: #c9e0d0;
+      text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.6);
+      letter-spacing: 18px;
+      line-height: 4rem;
+      font-size: 74px;
+      position: relative;
+      top: 18vh;
+      margin-left: 4%;
+      font-weight: 800; }
+    body header .nav {
+      position: fixed;
+      top: 0px;
+      padding: 5px;
+      width: 100%;
+      text-align: right;
+      background-color: rgba(248, 232, 215, 0.8);
+      z-index: 3000; }
+      body header .nav li {
+        display: inline;
+        padding: 2%; }
+      body header .nav a {
+        font-size: 30px;
+        color: #90cab9;
+        -webkit-text-decoration: underline dashed #ff9784;
+                text-decoration: underline dashed #ff9784;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.6); }
+  body .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70vh 70vh 70vh;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    position: relative;
+    top: 3vh;
+    bottom: 8.5vh; }
+    body .grid-container .container {
+      background-color: #db9a86;
+      padding: 3%; }
+    body .grid-container .logo {
+      background-image: url(https://i.imgur.com/CR3jRW3.jpg);
+      background-size: cover;
+      background-position: top;
+      overflow: hidden;
+      width: 100%;
+      height: 70vh;
+      grid-column: 1/2; }
+    body .grid-container #about {
+      grid-column: 2/3; }
+    body .grid-container #greencontainer {
+      background-color: #9fd3bc;
+      grid-column: 1/3; }
+    body .grid-container .product {
+      grid-column: 1/4;
+      height: 240vh;
+      background: -webkit-gradient(linear, left top, left bottom, from(#db9a86), to(white));
+      background: linear-gradient(#db9a86, white);
+      opacity: 0.8; }
+    body .grid-container .tall-tile {
+      background-image: url(https://i.imgur.com/0sjHODa.jpg);
+      background-size: cover;
+      grid-column: 3/4;
+      grid-row: 1/3;
+      overflow: hidden; }
+    body .grid-container h2 {
+      font-family: 'Turret Road', cursive;
+      letter-spacing: 7;
+      font-size: 52px;
+      color: #f8e8d7;
+      text-align: left;
+      margin: 3%;
+      font-weight: 800; }
+  body #product-grid {
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    grid-template-rows: auto;
+    grid-gap: 2.5vw;
+    padding: 2%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    body #product-grid a {
+      font-family: 'Turret Road', cursive;
+      font-size: 26px;
+      color: #206850; }
+    body #product-grid img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px; }
+    body #product-grid p {
+      text-align: left;
+      margin-left: 15px; }
+    body #product-grid .price {
+      text-align: right;
+      margin-right: 5vw; }
+    body #product-grid div {
+      text-align: center;
+      margin: 0;
+      border-radius: 10px;
+      background-color: rgba(245, 234, 223, 0.9);
+      -webkit-box-shadow: 2px 2px 4px  black;
+              box-shadow: 2px 2px 4px  black;
+      padding: 7%; }
+    body #product-grid div:hover {
+      background-color: white;
+      -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+              box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); }
+  body .editlink {
+    position: absolute;
+    right: 2%;
+    bottom: -160vh;
+    margin: 15px;
+    padding: 10px;
+    font-size: 24px;
+    background-color: black;
+    color: white; }
+  body .editlink:hover {
+    background-color: white;
+    color: black; }
+  body footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+    height: 7vh;
+    position: relative;
+    bottom: -170vh; }
+    body footer ul {
+      font-family: 'Turret Road', cursive;
+      letter-spacing: 4;
+      padding: 10px;
+      text-align: center; }
+    body footer li {
+      display: inline;
+      padding-left: 20px; }
+  @media (max-width: 600px) {
+    body header {
+      height: 30vh; }
+    body h1 {
+      font-size: 72px;
+      position: relative;
+      bottom: 4vh;
+      left: 1vw; }
+    body .grid-container {
+      display: grid;
+      grid-template-columns: 90vw;
+      grid-template-rows: repeat(6, 70vh);
+      position: relative;
+      margin-left: 16px;
+      margin-right: 16px; }
+    body .logo {
+      grid-column: 1/2; }
+    body .container {
+      grid-column: 1/2; }
+    body #greencontainer {
+      grid-column: 1/2;
+      overflow-x: scroll; }
+    body #about {
+      grid-column: 1/2;
+      overflow-x: scroll;
+      overflow-y: scroll; }
+    body #pot-grid {
+      grid-template-columns: 70vw;
+      grid-template-rows: repeat(3, 40vh);
+      grid-row-gap: 25px;
+      left: -40px;
+      top: 3px; }
+    body .product {
+      height: 270%; }
+    body footer {
+      height: 13vh; }
+    body footer li {
+      display: block; }
+    body #title {
+      overflow: hidden; }
+    body .nav {
+      text-align: left;
+      padding: 5px; }
+    body .nav li {
+      padding-left: 5px; }
+    body .pot-grid-item img {
+      height: 400px;
+      width: 400px;
+      position: relative;
+      left: 20%; } }
+  body .edit form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    margin-top: 10vh; }
+    body .edit form label {
+      padding: 15px; }
+    body .edit form input {
+      margin-left: 10px;
+      padding: 15px; }
+  body .new form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    margin-top: 10vh; }
+    body .new form label {
+      padding: 15px; }
+    body .new form input {
+      margin-left: 10px;
+      padding: 15px; }
+  body .show {
+    overflow: hidden;
+    text-align: center; }
+    body .show h1 {
+      font-family: 'Turret Road', cursive;
+      font-size: 3rem;
+      margin: 35px; }
+    body .show .button-bar {
+      position: relative;
+      bottom: 70vh;
+      left: 17vw;
+      width: 20vw;
+      text-align: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      border: 1px solid; }
+    body .show .editlink {
+      position: relative;
+      top: 0; }
+    body .show .buy, body .show .back, body .show .delete, body .show .editlink {
+      margin: 15px;
+      padding: 10px;
+      font-size: 18px;
+      background-color: black;
+      color: white;
+      width: 250px; }
+    body .show .buy:hover, body .show .back:hover, body .show .delete:hover, body .show .editlink:hover {
+      background-color: white;
+      color: black; }
+    body .show img {
+      background-color: whitesmoke;
+      position: relative;
+      left: 10vw;
+      height: 450px;
+      -webkit-box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.5);
+              box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.5); }
+    body .show .product-info {
+      margin: 0 auto;
+      width: 50%;
+      text-align: left;
+      padding: 1.3%;
+      border: 1px solid black;
+      font-size: 1.2rem; }
+      body .show .product-info .discription {
+        text-align: center; }
