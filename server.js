@@ -30,7 +30,7 @@ mongoose.connection.once('connected', ()=> console.log('mongoose connected'));
 //Routes
 
 //index
-app.get('/shop', (req,res)=>{
+app.get('/', (req,res)=>{
     Product.find({}, (err, foundProducts) =>{
         if(!err){
             res
@@ -46,15 +46,15 @@ app.get('/shop', (req,res)=>{
     } )
 })
 //new 
-app.get('/shop/new', (req,res)=>{
+app.get('/new', (req,res)=>{
     res.render('New')
 })
 
 //delete
-app.delete('/shop/:id', (req,res)=>{
+app.delete('/:id', (req,res)=>{
     Product.findByIdAndDelete(req.params.id, (err, deletedProduct)=>{
         if(!err){
-            res.redirect('/shop')
+            res.redirect('/')
         } else {
             res
                 .status(400)
@@ -64,10 +64,10 @@ app.delete('/shop/:id', (req,res)=>{
 })
 
 //Update 
-app.put('/shop/:id', (req,res)=>{
+app.put('/:id', (req,res)=>{
     Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err)=>{
         if(!err){
-            res.redirect(`/shop/${req.params.id}`)
+            res.redirect(`/${req.params.id}`)
         } else {
             res
                 .status(400)
@@ -76,10 +76,10 @@ app.put('/shop/:id', (req,res)=>{
     })
 })
 //create
-app.post('/shop', (req,res)=>{
+app.post('/new', (req,res)=>{
     Product.create(req.body, (err, createdProduct)=>{
         if(!err){
-            res.redirect('/shop')
+            res.redirect('/')
         } else {
             res
                 .status(400)
@@ -89,7 +89,7 @@ app.post('/shop', (req,res)=>{
 })
 
 //edit
-app.get('/shop/:id/edit', (req,res)=>{
+app.get('/:id/edit', (req,res)=>{
     Product.findById(req.params.id, (err, foundProduct)=>{
         if(!err){
             res
@@ -105,7 +105,7 @@ app.get('/shop/:id/edit', (req,res)=>{
     })
 })
 //show
-app.get('/shop/:id', (req,res)=>{
+app.get('/:id', (req,res)=>{
     Product.findById(req.params.id, (err, foundProduct)=>{
         if(!err){
             res
@@ -122,7 +122,7 @@ app.get('/shop/:id', (req,res)=>{
 })
 
 /// buy route 
-app.post('/shop/:id/buy', (req,res)=>{
+app.post('/:id/buy', (req,res)=>{
     Product.findById(req.params.id,(err, foundProduct)=>{
         if(!err){  
             foundProduct.qty -= 1;

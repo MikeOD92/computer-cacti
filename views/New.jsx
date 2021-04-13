@@ -7,7 +7,7 @@ class New extends React.Component{
             <AppLayout
                 title="New Product"
                 pageClass="new">
-                 <form action="/shop" method="POST">
+                 <form action="/" method="POST">
                     <label>Name:<input type="text" name="name"/></label>
                     <label>Description:<input type="text" name="description"/></label>
                     <label>img:<input type="text" name="img"/></label>
@@ -16,7 +16,7 @@ class New extends React.Component{
                     <input className='editlink' type="submit" value={'Create New Product'}/>
 
                 </form>
-                <a href={'/shop'}> Back </a>
+                <a href={'/'}> Back </a>
 
 
             </AppLayout>

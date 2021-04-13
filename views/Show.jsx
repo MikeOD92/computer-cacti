@@ -29,11 +29,11 @@ class Show extends React.Component{
                     </div>
                        <div className="button-bar">
                          <Button
-                        endpoint={`/shop/${this.props.product._id}?_method=DELETE`}
+                        endpoint={`/${this.props.product._id}?_method=DELETE`}
                         name={this.props.product.name}/>
-                       {qty!=="SOLD OUT"? <Purchase endpoint={`/shop/${this.props.product._id}/buy`}/>: ""}
-                    <a className="editlink" href={`/shop/${this.props.product._id}/edit`}> Edit {this.props.product.name}</a>
-                    <a className="back" href={'/shop'}> Back </a>
+                       {qty!=="SOLD OUT"? <Purchase endpoint={`/${this.props.product._id}/buy`}/>: ""}
+                    <a className="editlink" href={`/${this.props.product._id}/edit`}> Edit {this.props.product.name}</a>
+                    <a className="back" href={'/'}> Back </a>
                         </div>
                 </div>
             </AppLayout>

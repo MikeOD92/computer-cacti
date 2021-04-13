@@ -43,7 +43,7 @@ class Index extends React.Component{
             <div className="container product">
             
                     <h2 id="products"> Cacti {'&'} Planters </h2>
-                    <a className="editlink" href="/shop/new"> Add a New Product </a>
+                    <a className="editlink" href="/new"> Add a New Product </a>
 
                 <div id="product-grid">
             {this.props.products.map((product, i)=>{
@@ -51,7 +51,7 @@ class Index extends React.Component{
                 const priceTag = "$" + product.price;
                 return(
                     <div key={i}>
-                        <a href={`/shop/${product.id}`}>
+                        <a href={`/${product.id}`}>
                             <h3>{product.name}</h3>
                         <img src={`${product.img}`}/>
                         </a>
